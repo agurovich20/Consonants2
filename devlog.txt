@@ -1,1 +1,5 @@
-log
+1/13/22
+t - 0.6
+Set up all files
+Set up basic Woo.java to be the StuyTrail runner
+began implementing some of the similar methods used in magpie to recognize certain inputs
