@@ -13,6 +13,11 @@ pd 8
 <Project Summary / Working Title>
 Oregan Trai -> StuyTrail
 
+We are trying to recreate the popular text-based adventure game “Oregon Trail.” 
+Rather than taking place on the Oregon Trail, our players will become students 
+trying to make their way to Stuyvesant, while encountering random events 
+(that can either help or hurt the player), such as subway delays, lost ID cards, etc. 
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 USAGE:
 * Replace all fields, angle brackets included, with specified info.
@@ -67,9 +72,16 @@ tales of wisdom gained...
 ==============================================================
 
 
+2022-01-12
+--------------------------------------------------------------
+Oscar Breen :: Set up Github Files
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
 yyyy-mm-dd
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Ari Gurochiv :: Made roposal and added to Github
+             :: Drew enhanced team flag
+Oscar Breen  :: Set up Devlog and filled Template
 <Member> :: <Thing member did.>
 ==============================================================
