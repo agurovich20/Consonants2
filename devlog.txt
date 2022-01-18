@@ -72,22 +72,9 @@ tales of wisdom gained...
 ==============================================================
 
 
-2022-01-12
+yyyy-mm-dd
 --------------------------------------------------------------
-Oscar Breen :: Set up Github Files
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
-==============================================================
-2022-01-14
---------------------------------------------------------------
-Ari Gurochiv :: Made proposal and added to Github
-             :: Drew enhanced team flag
-Oscar Breen  :: Set up Devlog and filled Template
-Marcus Wu    :: Made proposal
-==============================================================
-2022-01-17
---------------------------------------------------------------
-Ari Gurochiv :: uploaded Team flag
-Oscar Breen  :: drew flows for implementation of random chance events
-Marcus Wu    :: flows for implementation of '' but specific to areas
+<Member> :: <Thing member did.>
 ==============================================================
