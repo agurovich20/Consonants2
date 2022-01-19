@@ -5,13 +5,13 @@ Set up basic Woo.java to be the StuyTrail runner
 began implementing some of the similar methods used in magpie to recognize certain inputs
 
 Consonants2
- Ari Gurochiv
+ Ari Gurovich
  Marcus Wu
  Oscar Breen
 pd 8
 ---------------------
 <Project Summary / Working Title>
-Oregan Trai -> StuyTrail
+Oregan Trail -> StuyTrail
 
 We are trying to recreate the popular text-based adventure game “Oregon Trail.” 
 Rather than taking place on the Oregon Trail, our players will become students 
