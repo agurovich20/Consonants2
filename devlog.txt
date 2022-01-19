@@ -90,3 +90,9 @@ Marcus Wu    :: Made proposal
 Ari Gurochiv :: uploaded Team flag
 Oscar Breen  :: drew flows for implementation of random chance events
 Marcus Wu    :: flows for implementation of '' but specific to areas
+==============================================================
+2022-01-18
+--------------------------------------------------------------
+Ari Gurochiv :: 
+Oscar Breen  :: 
+Marcus Wu    :: worked on StuyTrail and Woo to implement scanners
