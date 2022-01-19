@@ -11,6 +11,6 @@ public class Woo {
 		Scanner in = new Scanner (System.in);
 		String choice = in.nextLine(); //choice is their answer for scanner
 
-		run.choiceInt(choice);
+		
 	}
 }
