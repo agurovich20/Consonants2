@@ -96,4 +96,11 @@ Ari Gurovich :: Began implementing probability
 	        Made ideas for inventory items 
 Oscar Breen  :: Worked alongside to implement methods of home()
 Marcus Wu    :: Set up a GetBal method with varying S.O.P returns
+==============================================================
+2022-01-20
+--------------------------------------------------------------
+Ari Gurovich :: 
+Oscar Breen  :: 
+Marcus Wu    :: 
+
 
