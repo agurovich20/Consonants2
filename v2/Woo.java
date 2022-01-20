@@ -6,7 +6,7 @@ public class Woo {
 	public static void main(String[] args) {
 		StuyTrail game = new StuyTrail();
 
-		game.startGame();		
+		game.startGame();
 
 	}
 }
