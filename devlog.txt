@@ -1,9 +1,3 @@
-1/13/22
-t - 0.6
-Set up all files
-Set up basic Woo.java to be the StuyTrail runner
-began implementing some of the similar methods used in magpie to recognize certain inputs
-
 Consonants2
  Ari Gurovich
  Marcus Wu
@@ -19,10 +13,7 @@ trying to make their way to Stuyvesant, while encountering random events
 (that can either help or hurt the player), such as subway delays, lost ID cards, etc. 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-USAGE:
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete this instruction block once all teammates understand usage.
+
 
 devlog--
 Use keyboard shortcut to jump to end,
@@ -40,24 +31,27 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
+Using the scanner in the StuyTrails class, rather than relying on Woo.Java;s scanner inputs
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
+should the choices all be one helper method or should each decision have the choices laid 
+out specifically for that choice?
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
+
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
+we changed the one object of inventory to two, one for the starting choices and one for
+the interacvtion with outside home() because we didnt want overlap when it came to random 
+occurences
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tales of wisdom gained...
+dont have it linear, allow for switvhing between scenes and actions for a more Oregan-trail 
+type feel
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -70,13 +64,11 @@ tales of wisdom gained...
    \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/ 
 ==============================================================
-
-
-yyyy-mm-dd
+1/13/22
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+Oscar Breen  :: Set up accessory files
+Ari Gurochiv :: Set up basic Woo.java to be the StuyTrail runner
+Marcus WU    :: began implementing some of the similar methods used in magpie to recognize certain inputs
 ==============================================================
 2022-01-14
 --------------------------------------------------------------
@@ -93,6 +85,13 @@ Marcus Wu    :: flows for implementation of '' but specific to areas
 ==============================================================
 2022-01-18
 --------------------------------------------------------------
-Ari Gurochiv :: 
-Oscar Breen  :: 
+Ari Gurochiv :: ''
+Oscar Breen  :: ''
 Marcus Wu    :: worked on StuyTrail and Woo to implement scanners
+==============================================================
+2022-01-19
+--------------------------------------------------------------
+Ari Gurochiv :: Marked ideas for uses of inventory items
+Oscar Breen  :: Worked alongside to implement methods of home()
+Marcus Wu    :: Set up a GetBal method with varying S.O.P returns
+
