@@ -14,7 +14,6 @@ public class StuyTrail {
 		name = "";
 		hp = 10;
 		money = ((int) Math.random() * 20 ) + 5;
-		
 	}
 
 	public void startGame() {
