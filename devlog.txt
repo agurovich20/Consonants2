@@ -92,7 +92,8 @@ Marcus Wu    :: worked on StuyTrail and Woo to implement scanners
 ==============================================================
 2022-01-19
 --------------------------------------------------------------
-Ari Gurovich :: Began working on probability array and ideas for inventory items 
+Ari Gurovich :: Began implementing probability 
+	        Made ideas for inventory items 
 Oscar Breen  :: Worked alongside to implement methods of home()
 Marcus Wu    :: Set up a GetBal method with varying S.O.P returns
 
