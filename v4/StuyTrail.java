@@ -43,6 +43,10 @@ public class StuyTrail {
 		System.out.println( ret );
 	} //ends getBal()
 
+	public void getInv() {
+		System.out.println( "You reach into your bag and find..." );
+	}
+
 	public void home() {
 		System.out.println( "You're in your home.\nChoose what to bring:" );
 		ArrayList<String> itemsHome = new ArrayList<String>();
@@ -51,7 +55,9 @@ public class StuyTrail {
 		itemsHome.add("Jacket");
 		itemsHome.add("Gym Clothes");
 		for ( int i = 0; i < 5; i++ ) {
-			System.out.println( "1. " + itemsHome.get(0) );
+			for ( int p = 0; p < itemsHome.size(); p++ ) {
+				System.out.println();//ASDASUDJASIUD ADD STUFF HERE 
+			}
 			int itemIndex = Integer.parseInt( scannerInt.nextLine() );
 		 	inventory.add( itemsHome.get( itemIndex - 1 ) );
 			itemsHome.remove( itemIndex - 1 );
