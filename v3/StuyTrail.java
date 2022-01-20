@@ -6,7 +6,7 @@ public class StuyTrail {
 	private int hp;
 	private int money;
 	private String[5] inventory;
-	private int trainOdds;
+	private int Odds;
 
 	Scanner scannerString = new Scanner (System.in);
 	Scanner scannerInt = new Scanner (System.in);
@@ -52,12 +52,17 @@ public class StuyTrail {
 			
 	}
 
-	public void train() {
-	trainOdds = ((int) Math.random() *100 );
-	if ( trainOdds < 5 )
-		//hit by train
-	else if ( trainOdds < 20 )
-		// train late add time
+	public void disaster() {
+	Odds = ((int) Math.random() *100 );
+	if ( Odds < 5 )
+		// hit by train
+	else if ( Odds < 20 )
+		// train late
+	else if ( Odds < 30 ) && // no jacket
+		// freezing
+		// subtract health
+	else if ( Odds < 40 ) 
+		//lost ID_card
 	else
 		// train on time
 }
