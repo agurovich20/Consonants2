@@ -6,3 +6,8 @@ will have to use the command prompt to play the game, with no additional setup n
 encounter disasters, such as losing their metrocard, freezing from the cold, or being hit by a train. 
 The player's goal is to make their way to Stuyvesant in time for the start of the schoolday. 
 
+To start the game, compile and run Woo.java.
+```
+javac Woo.java
+java Woo
+```
