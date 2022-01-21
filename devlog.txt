@@ -42,12 +42,20 @@ COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+
+
+/ temporary section for ideas:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Add mask item, if don't have, 90% chance for Covid on any turn
+,
+At every scanner input increase time variable by one for turn count
+App seen on add in train, if have item: phone then have opportunity or playe binsearch game for money
+
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed the one object of inventory to two, one for the starting choices and one for
-the interacvtion with outside home() because we didnt want overlap when it came to random 
+the interaction with outside home() because we didnt want overlap when it came to random 
 occurences
-
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 dont have it linear, allow for switvhing between scenes and actions for a more Oregan-trail 
