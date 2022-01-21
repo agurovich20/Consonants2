@@ -26,7 +26,7 @@ public class StuyTrail {
 	public String nameCharacter() {
 		System.out.println( "What is your name?" );
 		name = scannerString.nextLine();
-		//System.out.println( name );
+		System.out.println("\nHello " + name + ", Your journey begins now\n" );
 		return name;
 	} //ends nameCharacter()
 
@@ -48,7 +48,7 @@ public class StuyTrail {
 	}
 
 	public void home() {
-		System.out.println( "You're in your home.\nChoose what to bring:" );
+		System.out.println( "You're in your home.\nWhat should you bring out with you?\nChoose Wisely, you only have 5 inventory slots: " );
 		ArrayList<String> itemsHome = new ArrayList<String>();
 		itemsHome.add("Student ID");
 		itemsHome.add("Student Metrocard");
@@ -56,11 +56,13 @@ public class StuyTrail {
 		itemsHome.add("Gym Clothes");
 		for ( int i = 0; i < 5; i++ ) {
 			for ( int p = 0; p < itemsHome.size(); p++ ) {
-				System.out.println();//ASDASUDJASIUD ADD STUFF HERE 
+				System.out.println( p+1 + ":" +  itemsHome.get(p));//ASDASUDJASIUD ADD STUFF HERE 
 			}
 			int itemIndex = Integer.parseInt( scannerInt.nextLine() );
 		 	inventory.add( itemsHome.get( itemIndex - 1 ) );
+			System.out.println("\nYou've added, " + itemsHome.get(itemIndex - 1) + ", to your inventory\n");
 			itemsHome.remove( itemIndex - 1 );
+
 		}
 	} //ends home()
 
