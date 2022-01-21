@@ -66,7 +66,7 @@ public class StuyTrail {
                 itemsHome.add("Jacket");
                 itemsHome.add("Gym Clothes");
                 //ADD MORE ITEMS HERE
-                for ( int i = 0; i < 4; i++ ) {
+                for ( int i = 0; i < 2; i++ ) {
                         for ( int p = 0; p < itemsHome.size(); p++ ) {
                                 System.out.println( p+1 + ": " +  itemsHome.get(p));//ASDASUDJASIUD ADD STUFF HERE 
                         }
