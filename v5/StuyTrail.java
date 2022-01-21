@@ -108,10 +108,15 @@ public class StuyTrail {
                         }
                 } else if ( Odds < 30 ) {  // no jacket
                         if( place == 3 ) {
-                                System.out.println("you got the fiver!");
+                                System.out.println("You got the fiver!");
                                 money = money + 5;
                         }
-                }
+                } else if (Odds >= 30 ) {
+			if ( place == 3 ) {
+				System.out.println("\nSomeone got to the fiver first, and in the kerfuffle you dropped " + inventory.get(0));
+			}
+		}
+
                 // freezing
                 // subtract health
 //      else if ( Odds < 40 ) 
