@@ -100,7 +100,7 @@ Marcus Wu    :: Set up a GetBal method with varying S.O.P returns
 2022-01-20
 --------------------------------------------------------------
 Ari Gurovich :: 
-Oscar Breen  :: 
+Oscar Breen  :: improved disasters method and added a new scene "train()" and choice in it (fiver)
 Marcus Wu    :: 
 
 
