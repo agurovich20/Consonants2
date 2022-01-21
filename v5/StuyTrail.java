@@ -86,7 +86,9 @@ public class StuyTrail {
                 System.out.println("You see a 5 dollar bill lying at the edge of the station, do you reach out for it?");
                 System.out.println("1: Yes \n2: No");
                 int answer = Integer.parseInt( scannerInt.nextLine() );
-                disaster();
+              if( answer == 1)
+                         disaster();
+                System.out.println("\nThe train arrives and you get onn\);
         } //ends train()
 
         public void disaster() {
