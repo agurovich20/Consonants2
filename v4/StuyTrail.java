@@ -44,7 +44,7 @@ public class StuyTrail {
 	} //ends getBal()
 
 	public void home() {
-		System.out.println( "You're in your home.\nChoose what to bring:" );
+		System.out.println( "Hello, " + name + "! You're in your home.\nChoose what to bring with you to school:" );
 		ArrayList<String> itemsHome = new ArrayList<String>();
 		itemsHome.add("Student ID");
 		itemsHome.add("Student Metrocard");
