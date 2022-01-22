@@ -52,6 +52,21 @@ public class StuyTrail {
                 }
         }
 
+        public void death() {
+                System.out.println("-----------------------GAME-OVER-----------------------");
+                        System.exit(0);
+        }//end death()
+
+        public void healthchng(int chng){
+                if(chng > 0)
+                        health = health + chng;
+                else if (health - chng <= 0)
+                        death();
+                else
+                        health = health - chng;
+        }//end healthchng
+
+
         public void home() {
 //<<<<<<< HEAD
                 System.out.println( "You wake up and get out of bed, ready to start the day.\nChoose two items to bring with you to school:" );
@@ -75,12 +90,7 @@ public class StuyTrail {
                 }
                 System.out.println("You have chosen: " + inventory + "\nTime to go to the subway. You have " + time + " minutes to get to school.\n");
         } //ends home()
-
-	public void death() {
-		if ( health == 0 )
-			System.exit(0);
-	}
-
+	
         public void train() {
 		arrival = (int)(Math.random() *8);
                 System.out.println("You arrive safely at the subway station! There is a train in " + arrival + " minutes.\n");
