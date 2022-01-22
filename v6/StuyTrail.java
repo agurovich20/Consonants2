@@ -68,7 +68,13 @@ public class StuyTrail {
                 health = health - chng;
 
         }//end healthchng
-
+	public void time(){
+		time = time - 2;
+		if (time <=0){
+			System.out.println("YOU RAN OUT OF TIME, YOU ARE LATE");
+			death();
+		}
+	}
 
         public void home() {
 //<<<<<<< HEAD
@@ -89,6 +95,7 @@ public class StuyTrail {
                                 System.out.println( p+1 + ": " +  itemsHome.get(p));//ASDASUDJASIUD ADD STUFF HERE 
                         }
                         int itemIndex = Integer.parseInt( scannerInt.nextLine() );
+			time();
                         inventory.add( itemsHome.get( itemIndex - 1 ) );
                         System.out.println("\nYou've added " + itemsHome.get(itemIndex - 1) + " to your inventory\n");
                         itemsHome.remove( itemIndex - 1 );
@@ -109,8 +116,10 @@ public class StuyTrail {
                 System.out.println("You see a 5 dollar bill lying at the edge of the station, do you reach out for it?");
                 System.out.println("1: Yes \n2: No");
                 int answer = Integer.parseInt( scannerInt.nextLine() );
-              if( answer == 1)
-                         disaster();
+              if( answer == 1){
+                        disaster();
+			time();
+		}
                 System.out.println("\nThe train arrives and you get on. You have " + time + " minutes left.");
         } //ends train()
 
@@ -140,7 +149,7 @@ public class StuyTrail {
 		//		System.out.println("health loss of 5 per turn");
 		//		healthchng( 5 );
 		//	}
-                        else if ( place == 3 ) {
+                        if ( place == 3 ) {
                                 System.out.println("You got the fiver!");
                                 money = money + 5;
                         }
