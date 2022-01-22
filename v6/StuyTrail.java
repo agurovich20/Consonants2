@@ -3,7 +3,7 @@ import java.util.*;
 
 public class StuyTrail {
 
-        private String name;
+	private String name;
         private int health, money, arrival, trainOdds, time, place, lost;
 
         Scanner scannerString = new Scanner (System.in);
@@ -28,7 +28,7 @@ public class StuyTrail {
         public String nameCharacter() {
                 System.out.println( "What is your name?" );
                 name = scannerString.nextLine();
-                System.out.println("\nHello " + name + ", Your journey begins now!\n" );
+                System.out.println("\nHello " + name + ", your journey begins now!\n" );
                 return name;
         } //ends nameCharacter()
 
