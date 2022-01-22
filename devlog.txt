@@ -110,4 +110,13 @@ Marcus Wu    :: Set up a GetBal method with varying S.O.P returns
 Ari Gurovich :: Continued implementing probability and disasters 
 Oscar Breen  :: improved disasters method and added a new scene "train()" and choice in it (fiver)
 Marcus Wu    :: 
+==============================================================
+2022-01-21
+--------------------------------------------------------------
+Ari Gurovich :: implemented death() method, ending the class and prinit ngame over if ran, added shceduled time and its changes, added change to health and inventory drop of
+		item if grabbing fiver is failed
+Oscar Breen  :: added healthchng method to chnage healoth up and down and activate death() method when below or = 0
+		Added switching place variables for better disaster syncing and timer(), which runs death() if u run out of time
+Marcus Wu    :: 
+
 
