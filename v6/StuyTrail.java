@@ -57,13 +57,15 @@ public class StuyTrail {
                         System.exit(0);
         }//end death()
 
-        public void healthchng(int chng){
-                if(chng > 0)
-                        health = health + chng;
-                else if (health - chng <= 0)
-                        death();
-                else
+        public void healthchng(int chng int turncnt){
+                while(turncnt > 0){
+			if(chng > 0)
+                        	health = health + chng;
+                	else if (health - chng <= 0)
+                       	 	death();
+                	else
                         health = health - chng;
+                }
         }//end healthchng
 
 
@@ -93,8 +95,10 @@ public class StuyTrail {
 	
         public void train() {
 		arrival = (int)(Math.random() *8);
+		place == 1;
                 System.out.println("You arrive safely at the subway station! There is a train in " + arrival + " minutes.\n");
 		time = time - arrival;
+		place == 2;
                 disaster();
                 place = 3;
                 System.out.println("You see a 5 dollar bill lying at the edge of the station, do you reach out for it?");
@@ -112,10 +116,12 @@ public class StuyTrail {
 			health = 0;
                         death();
                 }
-                if ( Odds < 10 && place == 2 ) {
-                        System.out.println("You got hit by a train, must suck");
-                        health = 0;
-                        death();
+                if ( Odds < 10 ) {
+			if (place == 2){
+                        	System.out.println("You got hit by a train, must suck");
+                        	health = 0;
+                        	death();
+			}
                 } else if ( Odds < 20 ) {
                         if( place == 2 ){
                                 time = time - 5;
@@ -123,10 +129,16 @@ public class StuyTrail {
                                 // train late
                         }
                 } else if ( Odds < 30 ) {  // no jacket
+			if (place == 1) {
+				System.out.println("looks like its cold out today, a jacket would've helped")
+				System.out.println("health loss of 5 per turn")
+				healthchng( 5 , 50 );
+			}
                         if( place == 3 ) {
                                 System.out.println("You got the fiver!");
                                 money = money + 5;
                         }
+
                 } else if (Odds >= 30 ) {
 			if ( place == 3 ) {
 				lost = 5;
