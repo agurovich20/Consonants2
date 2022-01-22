@@ -4,7 +4,7 @@ import java.util.*;
 public class StuyTrail {
 
         private String name;
-        private int hp, money, trainOdds, time, place;
+        private int hp, money, arrival, trainOdds, time, place;
         private boolean playerD;
 
         Scanner scannerString = new Scanner (System.in);
@@ -15,7 +15,7 @@ public class StuyTrail {
                 name = "";
                 hp = 10;
                 money = ( (int) Math.random() * 20 ) + 5;;
-                time = 0;
+                time = 60;
                 place = 0;
                 playerD = false;
         } //contructor
@@ -56,7 +56,7 @@ public class StuyTrail {
 
         public void home() {
 //<<<<<<< HEAD
-                System.out.println( "You wake up and get out of bed, ready to start the day.\nChoose what to bring with you to school:" );
+                System.out.println( "You wake up and get out of bed, ready to start the day.\nChoose two items to bring with you to school:" );
 //=======
                 //System.out.println( "You're in your home.\nWhat should you bring out with you?\nChoose Wisely, you only have 5 inventory slots: " );
 //>>>>>>> 95a3ad18e326358a65a42955ce3d9ffd602e7707
@@ -75,12 +75,14 @@ public class StuyTrail {
                         System.out.println("\nYou've added " + itemsHome.get(itemIndex - 1) + " to your inventory\n");
                         itemsHome.remove( itemIndex - 1 );
                 }
-                System.out.println("You have chosen: " + inventory + "\n Time to go to the train");
+                System.out.println("You have chosen: " + inventory + "\nTime to go to the subway. You have " + time + " minutes to get to school.\n");
         } //ends home()
 
         public void train() {
                 System.out.println("----------------------------------------------------------------");
-                System.out.println("\nYou arrive at the train");
+		arrival = (int)(Math.random() *8);
+                System.out.println("\nYou arrive safely at the subway station! There is a train in " + arrival + " minutes.\n");
+		time = time - arrival;
                 disaster();
                 place = 3;
                 System.out.println("You see a 5 dollar bill lying at the edge of the station, do you reach out for it?");
@@ -88,24 +90,22 @@ public class StuyTrail {
                 int answer = Integer.parseInt( scannerInt.nextLine() );
               if( answer == 1)
                          disaster();
-                System.out.println("\nThe train arrives and you get onn\);
+                System.out.println("\nThe train arrives and you get on.");
         } //ends train()
 
         public void disaster() {
                 int Odds = ((int) (Math.random() * 100 ));
-                if ( Odds < 2 ) {
+                if ( Odds < 5 ) {
                         System.out.println("You died of dysentery");
                         playerD = true;
                 }
-                if ( Odds < 5 ) {
-                        if ( place == 2 ) {
-                              System.out.println("You got hit by a train, must suck");
+                if ( Odds < 10 && place == 2 ) {
+                        System.out.println("You got hit by a train, must suck");
                                 playerD = true;
-                        }
                 } else if ( Odds < 20 ) {
                         if( place == 2 ){
                                 time = time - 5;
-                                System.out.println( "Train 5 minutes late, time before late: " + time );
+                                System.out.println( "Your train has been delayed by 5 minutes! You only have " + time + " before you are late.");
                                 // train late
                         }
                 } else if ( Odds < 30 ) {  // no jacket
@@ -115,7 +115,7 @@ public class StuyTrail {
                         }
                 } else if (Odds >= 30 ) {
 			if ( place == 3 ) {
-				System.out.println("\nSomeone got to the fiver first, and in the kerfuffle you dropped " + inventory.get(0));
+				System.out.println("\nSomeone got to the fiver first, and in the kerfuffle you dropped your " + inventory.get(0));
 			}
 		}
 
