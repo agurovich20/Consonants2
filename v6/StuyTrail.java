@@ -57,7 +57,7 @@ public class StuyTrail {
                         System.exit(0);
         }//end death()
 
-        public void healthchng(int chng int turncnt){
+        public void healthchng(int chng , int turncnt){
                 while(turncnt > 0){
 			if(chng > 0)
                         	health = health + chng;
@@ -94,11 +94,13 @@ public class StuyTrail {
         } //ends home()
 	
         public void train() {
+                System.out.println("-------------------------------------------------------");
+
 		arrival = (int)(Math.random() *8);
-		place == 1;
+		place = 1;
                 System.out.println("You arrive safely at the subway station! There is a train in " + arrival + " minutes.\n");
 		time = time - arrival;
-		place == 2;
+		place = 2;
                 disaster();
                 place = 3;
                 System.out.println("You see a 5 dollar bill lying at the edge of the station, do you reach out for it?");
@@ -130,11 +132,11 @@ public class StuyTrail {
                         }
                 } else if ( Odds < 30 ) {  // no jacket
 			if (place == 1) {
-				System.out.println("looks like its cold out today, a jacket would've helped")
-				System.out.println("health loss of 5 per turn")
+				System.out.println("looks like its cold out today, a jacket would've helped");
+				System.out.println("health loss of 5 per turn");
 				healthchng( 5 , 50 );
 			}
-                        if( place == 3 ) {
+                        else if( place == 3 ) {
                                 System.out.println("You got the fiver!");
                                 money = money + 5;
                         }
@@ -144,8 +146,7 @@ public class StuyTrail {
 				lost = 5;
 				System.out.println("\nSomeone got to the fiver first, and in the kerfuffle you dropped your " + inventory.get(0) + "!");
 				System.out.println("\nYou also lost " + lost + "% of your health.");
-				health = health - lost;
-				death();
+				healthchng(5 , 1);
 			}
 		}
 
