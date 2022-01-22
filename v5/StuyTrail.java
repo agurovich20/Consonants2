@@ -15,7 +15,7 @@ public class StuyTrail {
                 name = "";
                 hp = 10;
                 money = ( (int) Math.random() * 20 ) + 5;;
-                time = 60;
+                time = 40;
                 place = 0;
                 playerD = false;
         } //contructor
@@ -90,7 +90,7 @@ public class StuyTrail {
                 int answer = Integer.parseInt( scannerInt.nextLine() );
               if( answer == 1)
                          disaster();
-                System.out.println("\nThe train arrives and you get on.");
+                System.out.println("\nThe train arrives and you get on. You have " + time + " minutes left.");
         } //ends train()
 
         public void disaster() {
