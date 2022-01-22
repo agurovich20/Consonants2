@@ -4,7 +4,7 @@ import java.util.*;
 public class StuyTrail {
 
         private String name;
-        private int health, money, arrival, trainOdds, time, place, lost;
+        private int turn, health, money, arrival, trainOdds, time, place, lost, hpchng;
 
         Scanner scannerString = new Scanner (System.in);
         Scanner scannerInt = new Scanner (System.in);
@@ -16,6 +16,8 @@ public class StuyTrail {
                 money = ( (int) Math.random() * 20 ) + 5;;
                 time = 40;
                 place = 0;
+		hpchng = 0;
+		turn = 0;
         } //contructor
 
         public void startGame() {
@@ -57,15 +59,14 @@ public class StuyTrail {
                         System.exit(0);
         }//end death()
 
-        public void healthchng(int chng , int turncnt){
-                while(turncnt > 0){
-			if(chng > 0)
+        public void healthchng(int chng){
+		if(chng > 0)
                         	health = health + chng;
-                	else if (health - chng <= 0)
+                else if (health - chng <= 0)
                        	 	death();
-                	else
-                        health = health - chng;
-                }
+                else
+                health = health - chng;
+
         }//end healthchng
 
 
@@ -80,6 +81,8 @@ public class StuyTrail {
                 itemsHome.add("Student Metrocard");
                 itemsHome.add("Jacket");
                 itemsHome.add("Gym Clothes");
+                itemsHome.add("Cell Phone");
+                itemsHome.add("Mask");
                 //ADD MORE ITEMS HERE
                 for ( int i = 0; i < 2; i++ ) {
                         for ( int p = 0; p < itemsHome.size(); p++ ) {
@@ -131,12 +134,13 @@ public class StuyTrail {
                                 // train late
                         }
                 } else if ( Odds < 30 ) {  // no jacket
-			if (place == 1) {
-				System.out.println("looks like its cold out today, a jacket would've helped");
-				System.out.println("health loss of 5 per turn");
-				healthchng( 5 , 50 );
-			}
-                        else if( place == 3 ) {
+			System.out.println("test");
+		//	if (place == 1) {
+		//		System.out.println("looks like its cold out today, a jacket would've helped");
+		//		System.out.println("health loss of 5 per turn");
+		//		healthchng( 5 );
+		//	}
+                        else if ( place == 3 ) {
                                 System.out.println("You got the fiver!");
                                 money = money + 5;
                         }
@@ -146,7 +150,7 @@ public class StuyTrail {
 				lost = 5;
 				System.out.println("\nSomeone got to the fiver first, and in the kerfuffle you dropped your " + inventory.get(0) + "!");
 				System.out.println("\nYou also lost " + lost + "% of your health.");
-				healthchng(5 , 1);
+				healthchng(5);
 			}
 		}
 
