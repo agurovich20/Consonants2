@@ -4,8 +4,7 @@ import java.util.*;
 public class StuyTrail {
 
         private String name;
-        private int hp, money, arrival, trainOdds, time, place;
-        private boolean playerD;
+        private int health, money, arrival, trainOdds, time, place, lost;
 
         Scanner scannerString = new Scanner (System.in);
         Scanner scannerInt = new Scanner (System.in);
@@ -13,11 +12,10 @@ public class StuyTrail {
 
         public StuyTrail() {
                 name = "";
-                hp = 10;
+                health = 100;
                 money = ( (int) Math.random() * 20 ) + 5;;
                 time = 40;
                 place = 0;
-                playerD = false;
         } //contructor
 
         public void startGame() {
@@ -78,10 +76,14 @@ public class StuyTrail {
                 System.out.println("You have chosen: " + inventory + "\nTime to go to the subway. You have " + time + " minutes to get to school.\n");
         } //ends home()
 
+	public void death() {
+		if ( health == 0 )
+			System.exit(0);
+	}
+
         public void train() {
-                System.out.println("----------------------------------------------------------------");
 		arrival = (int)(Math.random() *8);
-                System.out.println("\nYou arrive safely at the subway station! There is a train in " + arrival + " minutes.\n");
+                System.out.println("You arrive safely at the subway station! There is a train in " + arrival + " minutes.\n");
 		time = time - arrival;
                 disaster();
                 place = 3;
@@ -97,11 +99,13 @@ public class StuyTrail {
                 int Odds = ((int) (Math.random() * 100 ));
                 if ( Odds < 5 ) {
                         System.out.println("You died of dysentery");
-                        playerD = true;
+			health = 0;
+                        death();
                 }
                 if ( Odds < 10 && place == 2 ) {
                         System.out.println("You got hit by a train, must suck");
-                                playerD = true;
+                        health = 0;
+                        death();
                 } else if ( Odds < 20 ) {
                         if( place == 2 ){
                                 time = time - 5;
@@ -115,7 +119,11 @@ public class StuyTrail {
                         }
                 } else if (Odds >= 30 ) {
 			if ( place == 3 ) {
-				System.out.println("\nSomeone got to the fiver first, and in the kerfuffle you dropped your " + inventory.get(0));
+				lost = 5;
+				System.out.println("\nSomeone got to the fiver first, and in the kerfuffle you dropped your " + inventory.get(0) + "!");
+				System.out.println("\nYou also lost " + lost + "% of your health.");
+				health = health - lost;
+				death();
 			}
 		}
 
