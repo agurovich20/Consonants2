@@ -37,13 +37,13 @@ public class StuyTrail {
         public void getBal() {
                 String ret = "";
                 if ( money >= 50 )
-                        ret = "You have $" + money + " in your wallet. You're rich!";
+                        ret = "$" + money + " in your wallet. You're rich!";
                 else if ( money >= 20 )
-                        ret = "You have $" + money + " in your wallet. Nice!";
+                        ret = "$" + money + " in your wallet. Nice!";
                 else if ( money > 0 )
-                        ret = "You have $" + money + " in your wallet.";
+                        ret = "$" + money + " in your wallet.";
                 else
-                        ret = "You're broke.";
+                        ret = "Well, You're broke.";
                 System.out.println( ret );
         } //ends getBal()
 
@@ -78,8 +78,13 @@ public class StuyTrail {
 
 	public void game(){
 		GuessNumber game = new GuessNumber(1, 30);
-
+		System.out.println(" you need to guess it in 3 trys or less");
                 game.play();
+		if(game._guessCtr < 4){
+			money = money + 5; 
+			getBal();
+		}
+		else System.out.println("oof, too many trys there, no money"); getBal();
 	}
 
         public void home() {
@@ -106,7 +111,9 @@ public class StuyTrail {
                         System.out.println("\nYou've added " + itemsHome.get(itemIndex - 1) + " to your inventory\n");
                         itemsHome.remove( itemIndex - 1 );
                 }
-                System.out.println("You have chosen: " + inventory + "\nTime to go to the subway. You have " + time + " minutes to get to school.\n");
+                System.out.println("You have chosen: " + inventory + " and start off with: ");
+                 getBal();
+                 System.out.println("\nTime to go to the subway. You have " + time + " minutes to get to school.\n");
         } //ends home()
 	
         public void train() {
@@ -128,17 +135,23 @@ public class StuyTrail {
 		}
                 System.out.println("\nThe train arrives and you get on. You have " + time + " minutes left.");
 		System.out.println("\nWhile waiting in the train you spot an ad, it promotes a game to win actual money!");
+			boolean has = false;
 		for ( int i = 0; i < inventory.size(); i++ ) {
 		  if ( inventory.get(i).equals("Cell Phone") ){
     			System.out.println("\nAnd you have your phone, play the game?");
 	                System.out.println("1: Yes \n2: No");
 	                int ans2 = Integer.parseInt( scannerInt.nextLine() );
-        		      if( ans2 == 1){
-                        	time();
-				game();
+			     if( ans2 == 1){
+                        	has = true;
 				}
 		  }
-		else System.out.println("\n\nwell maybe if you had your cell phone....");
+		  } // ends checking loop
+		 if(has = false){
+			System.out.println("\n\nwell maybe if you had your cell phone....");
+        	}
+        	else {
+        		time();
+        		game();
         	}
 	} //ends train()
 

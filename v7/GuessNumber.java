@@ -4,7 +4,8 @@ public class GuessNumber
 {
 
   //instance vars
-  private int _lo, _hi, _guessCtr, _target;
+  private int _lo, _hi, _target;
+  public int _guessCtr;
   Scanner sc = new Scanner( System.in );
 
 
