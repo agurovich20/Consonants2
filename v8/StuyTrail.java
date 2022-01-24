@@ -114,7 +114,7 @@ public class StuyTrail {
 		if( hasC == true ) {//have card
     			System.out.println( "good thing you've got your student metrocard" );
 		} else {//dont have card
-    			System.out.println( "yikes, no card? gonna have to pay... or jump" );
+    			System.out.println( "yikes, no metrocard? gonna have to pay... or jump" );
     			System.out.println( "\n1: Jump \n2: Pay ($3)" );
 	        	int ans3 = Integer.parseInt( scannerInt.nextLine() );
 			if ( ans3 == 1 ) {
@@ -157,14 +157,14 @@ public class StuyTrail {
 			}
 		} // ends checking loop
 		if( has == false ){
-			System.out.println( "\nthat game was probably a virus anyway..." );
+			System.out.println( "\nUnfortunately you forgot your phone. Eh, that game was probably a virus anyway..." );
         	} else if ( has == true ) {
         		time();
         		game();
         	}//ends cell phone scenario
 
 		//start charity encounter
-		System.out.println("\n A man approaches you asking for some money, do you choose to be charitable? ($3)");
+		System.out.println("\nA man approaches you asking for some money, do you choose to be charitable? ($3)");
 		System.out.println("\n1: Yes \n2: No");
 		int ans2 = Integer.parseInt( scannerInt.nextLine() );
 		if( ans2 == 1 ) {
@@ -250,14 +250,13 @@ public class StuyTrail {
 			}
 			else if (place == 0) {
 				System.out.println( "Oh Yiiiiiiikes, yikes dude, oh my god your face, yikes." );
-				System.out.println( "yeah uh, yeah health loss of 10 for that one" );
+				System.out.println( "/nyeah um... yeah health loss of 10 for that one" );
 				health = health - 10;
 			}
 		} else if ( Odds >= 30 ) {
 			if ( place == 3 ) {
 				lost = 5;
-				System.out.println( "\nSomeone got to the fiver first, and in the kerfuffle you dropped your " + inventory.get(0) + "!" );
-				System.out.println( "\nYou also lost " + lost + " of your health." );
+				System.out.println( "\nSomeone pushed you out of the way and got to the fiver first. You lost " + lost + " of your health." );
 				healthchng(5);
 			} else if( place == 0 ) {
 				System.out.println( "Ayooooo you made it, free ride" );
