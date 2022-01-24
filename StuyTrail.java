@@ -187,7 +187,7 @@ public class StuyTrail {
 		time();
 		place = 4;
 		disaster();
-		System.out.println("After walking the sacred two blocks from the train to Stuyvesant, you get to the bridge with a only " + time + " to spare, \nBut it isn't over yet!");
+		System.out.println("After walking the sacred two blocks from the train to Stuyvesant, you get to the bridge with only " + time + " minutes to spare, \nBut it isn't over yet!");
 	}
 
 	public void stuy() {
