@@ -177,7 +177,7 @@ public class StuyTrail {
                                 System.out.println( "damn dude you're broker than him, you dont got cash for that" );
 		} else
 			System.out.println( "\nWoooooooow, ok man, ur choice whatever" );
-			//end charity encounter
+			//end charity encounter
 
 	} //ends train()
 
