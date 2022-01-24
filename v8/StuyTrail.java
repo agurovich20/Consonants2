@@ -128,7 +128,7 @@ public class StuyTrail {
 		}//end of metrocard scenario
 		arrival = ( (int) Math.random() * 8 ) + 1;
 		place = 1;
-                System.out.println( "You arrive safely at the subway station! The next train arrives in " + arrival + " minutes.\n" );
+                System.out.println( "You've made it to the subway station! The next train arrives in " + arrival + " minutes.\n" );
 		time = time - arrival;
 		place = 2;
                 disaster();//chance for delay or you get hit by the train
@@ -148,7 +148,7 @@ public class StuyTrail {
 			boolean has = false;//cell phone variable
 		for ( int i = 0; i < inventory.size(); i++ ) {
 			if ( inventory.get(i).equals("Cell Phone") ){
-    				System.out.println("\nAnd you have your phone, play the game?");
+    				System.out.println("\nAnd you have your phone, play thegame?");
 	                	System.out.println("1: Yes \n2: No");
 	                	int ans2 = Integer.parseInt( scannerInt.nextLine() );
 				if( ans2 == 1 ) {
@@ -250,7 +250,7 @@ public class StuyTrail {
 			}
 			else if (place == 0) {
 				System.out.println( "Oh Yiiiiiiikes, yikes dude, oh my god your face, yikes." );
-				System.out.println( "/nyeah um... yeah health loss of 10 for that one" );
+				System.out.println( "yeah um... yeah health loss of 10 for that one" );
 				health = health - 10;
 			}
 		} else if ( Odds >= 30 ) {
