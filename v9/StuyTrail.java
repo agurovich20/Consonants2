@@ -210,7 +210,7 @@ public class StuyTrail {
     			System.out.println( "\n1: FIGHT \n2: Pay, the cowards way out ($5)" );
 	        	int ans6 = Integer.parseInt( scannerInt.nextLine() );
 			if ( ans6 == 1 ) {
-				System.out.println( "It had to come to this" );
+				System.out.println( "It had to come to this. For DEATH or GLORY!" );
 				FIGHT();
     			} else if ( ans6 == 2 ) {
 				if((money - 5) > 0){
