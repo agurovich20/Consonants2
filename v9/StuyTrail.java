@@ -258,9 +258,9 @@ public class StuyTrail {
 	public void disaster() {
 		int Odds = (int) ( Math.random() * 100 + 1 );
 		if ( Odds < 4 ) {
-			if (place < 5){
-			System.out.println( "You died of dysentery" );
-			healthchng(-50);
+			if ( place < 5 ){
+				System.out.println( "You died of dysentery" );
+				healthchng(-50);
 			}
 		}//close odds 3
 		if ( Odds < 10 ) {
