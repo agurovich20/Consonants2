@@ -131,7 +131,7 @@ public class StuyTrail {
 		}//end of metrocard scenario
 		arrival = ( (int) Math.random() * 8 ) + 1;
 		place = 1;
-                System.out.println( "You arrive safely at the subway station! The next train arrives in " + arrival + " minutes.\n" );
+                System.out.println( "You've made it to the subway station! The next train arrives in " + arrival + " minutes.\n" );
 		time = time - arrival;
 		place = 2;
                 disaster();//chance for delay or you get hit by the train
@@ -160,7 +160,7 @@ public class StuyTrail {
 			}
 		} // ends checking loop
 		if( has == false ){
-			System.out.println( "\nthat game was probably a virus anyway..." );
+			System.out.println( "\nUnfortunately, you didn't bring your phone. That game was probably a virus anyway..." );
         	} else if ( has == true ) {
         		time();
         		game();
@@ -174,10 +174,10 @@ public class StuyTrail {
 			if( money >= 3 ){
 				System.out.println( "\nYou give the man 2 dollars" );
 				money -= 3;
-				System.out.println( "\nAfter some Karma generated godly intervention, you gain 5 minutes of time!" );
+				System.out.println( "\nThe karma from your charity got you 5 bonus minutes of time!" );
 				time += 5;
 			} else
-                                System.out.println( "damn dude you're broker than him, you dont got cash for that" );
+                                System.out.println( "damn dude you're broker than him, you don't have cash for that" );
 		} else
 			System.out.println( "\nWoooooooow, ok man, ur choice whatever" );
 			//end charity encounter
@@ -190,7 +190,7 @@ public class StuyTrail {
 		time();
 		place = 4;
 		disaster();
-		System.out.println("After walking the sacred two blocks from the train to Stuyvesant, you get to the bridge with a sacred " + time + " minutes left, \nbut its not over");
+		System.out.println("After walking the sacred two blocks from the train to Stuyvesant, you get to the bridge with a only " + time + " to spare, \nBut it isn't over yet!");
 	}
 
 	public void stuy() {
@@ -204,9 +204,9 @@ public class StuyTrail {
     			}
 		}
 		if( hasID == true ) {//have card
-    			System.out.println( "AND YES YOU ARE, you swipe with confidence and \n\nyou. \nare. \n\nIN" );
+    			System.out.println( "AND YES YOU ARE, you swipe with confidence and \n\nYOU. \nARE. \n\nIN" );
 		} else {//dont have card
-    			System.out.println( "Oh no.... you dont have your ID\n but you HAVE to get in, you've got a Calc test dude!!\n\n So make the choce." );
+    			System.out.println( "Oh no.... you dont have your ID\n but you HAVE to get in, you've got a Calc test dude!!\n\n So make the choice." );
     			System.out.println( "\n1: FIGHT \n2: Pay, the cowards way out ($5)" );
 	        	int ans6 = Integer.parseInt( scannerInt.nextLine() );
 			if ( ans6 == 1 ) {
@@ -217,28 +217,28 @@ public class StuyTrail {
 				System.out.println( "ok nerd, you get in. " );
 				}
 				else {
-				System.out.println("you dont got the cash for that, looks like you're FIGHTING");
+				System.out.println("you don't got the cash for that, looks like you're FIGHTING");
 				FIGHT();
 				}
 			}
 		}
-		System.out.println("\nWait\nWas today a Gym day");
+		System.out.println("\nWait\nWas today a Gym day?");
 		place = 9;
 		disaster();
 	}
 
 	public void FIGHT() {
-		System.out.println("you've got " + health + " health left \n She has 20, you got this");
+		System.out.println("you've got " + health + " health left \n She has 20, you can do it");
 		while(healthB > 0){
 			for(int c = 5; c < 8; c++){
 				place = c;
 				disaster();
 			}
 		}
-		System.out.println("\n\n\n\nYouve done it. \n\nyou really made it. \n\nYou have passed the StuyTrail.");
+		System.out.println("\n\n\n\nYouve done it. \n\nyou really made it. \n\nYou have passed the StuyTrail. Now can you pass your classes?");
 		System.out.println("\nHow do you feel? \n1: Good \n2: Bad");
 		int ans7 = Integer.parseInt( scannerInt.nextLine() );
-		System.out.println("Cool, cool I dont care");
+		System.out.println("Cool, cool I don't care");
 	}
 
 	public void game() {
