@@ -6,8 +6,10 @@ will have to use the command prompt to play the game, with no additional setup n
 encounter disasters, such as losing their metrocard, freezing from the cold, or being hit by a train. 
 The player's goal is to make their way to Stuyvesant in time for the start of the schoolday. 
 
-To start the game, compile and run Woo.java.
+To start the game, clone the repo, then compile and run Woo.java.
 ```
+git clone https://github.com/agurovich20/Consonants2.git <REPONAME>
+cd <REPONAME>
 javac Woo.java
 java Woo
 ```
