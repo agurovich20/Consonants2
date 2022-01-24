@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.util.*;
 
@@ -5,14 +6,13 @@ public class StuyTrail {
 
 	private String name;
 	private int turn, health, money, arrival, trainOdds, time, place, lost, hpchng;
-
 	Scanner scannerString = new Scanner (System.in);
 	Scanner scannerInt = new Scanner (System.in);
 	ArrayList<String> inventory = new ArrayList<String>();
 
 	public StuyTrail() {
 		name = "";
-		health = 100;
+		health = 25;
 		money = 0;
 		time = 40;
 		place = 0;
@@ -178,9 +178,15 @@ public class StuyTrail {
 		} else
 			System.out.println( "\nWoooooooow, ok man, ur choice whatever" );
 			//end charity encounter
-
+			walk();
 	} //ends train()
 
+	public void walk() {
+		System.out.println("-------------------------------------------------------");
+		System.out.println("\nYou get to your stop and exit the train");
+		place = 4;
+		disaster();
+	}
 	public void game() {
 		GuessNumber game = new GuessNumber(1, 30);
 		System.out.println( "Guess the number in 3 tries or less" );
@@ -208,12 +214,30 @@ public class StuyTrail {
 				health = 0;
 				death();
 			}
+			else if ( place == 4){
+				System.out.println("The sidewalks are really busy and that health line is filled with a whole lot of anti-maskers....");
+				boolean hasM = false;
+				for ( int b = 0; b < inventory.size(); b++ ) {//check for mask
+					if ( inventory.get(b).equals("Mask") ){
+                       				 hasM = true;
+					}
+				} // ends checking loop
+
+				if (hasM == true)
+					System.out.println("\nBut you've got your mask! Good choice.");
+				else{
+					System.out.println("\nToday was NOT a good day to forget a mask for your travel.");
+					System.out.println("Ur getting sick so 10 health loss for that");
+
+					health -= 10;
+				}
+			}
 		} else if ( Odds < 20 ) {
 			if( place == 2 ){
 				time = time - 5;
 				System.out.println( "Your train has been delayed by 5 minutes! You only have " + time + " before you are late." );
 				// train late
-			}
+			} 
 		} else if ( Odds < 30 ) {  // no jacket
 		/*	if ((place == 1) && has4 = false) {
 				System.out.println("looks like its cold out today, a jacket would've helped");
