@@ -299,7 +299,7 @@ public class StuyTrail {
 				System.out.println("YOU GO FOR A HEADSLAM AND IT FLOWS THROUGH \n THATS A CRUSHING 10 PTS OF DAMAGE");
 				healthB -= 10;
 			}//close p7
-		} //close odds 20 
+		} //close odds 20
 		else if ( Odds < 30 ) {
 			if ( place == 3 ) {
 				System.out.println( "You got the fiver! Nice!" );
