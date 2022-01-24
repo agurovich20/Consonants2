@@ -206,7 +206,7 @@ public class StuyTrail {
 		if( hasID == true ) {//have card
     			System.out.println( "AND YES YOU ARE, you swipe with confidence and \n\nyou. \nare. \n\nIN" );
 		} else {//dont have card
-    			System.out.println( "Oh no.... you dont have your ID/n but you HAVE to get in, you've got a Calc test dude!!/n/n So make the choce." );
+    			System.out.println( "Oh no.... you dont have your ID\n but you HAVE to get in, you've got a Calc test dude!!\n\n So make the choce." );
     			System.out.println( "\n1: FIGHT \n2: Pay, the cowards way out ($5)" );
 	        	int ans6 = Integer.parseInt( scannerInt.nextLine() );
 			if ( ans6 == 1 ) {
@@ -285,7 +285,7 @@ public class StuyTrail {
 				}
 			}
 			else if (place == 5 ){
-				System.out.println("AND YOU GET HER BY SUPRISE, HEAVY RIGHT HOOK /n 10 PTS OF DAMAGE");
+				System.out.println("AND YOU GET HER BY SUPRISE, HEAVY RIGHT HOOK \n 10 PTS OF DAMAGE");
 					healthB -= 10;
 			}
 		} else if ( Odds < 20 ) {
