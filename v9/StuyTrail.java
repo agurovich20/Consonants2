@@ -63,12 +63,10 @@ public class StuyTrail {
 	}//end death()
 
 	public void healthchng( int chng ) {
-		if( chng < 0 )
-			health = health + chng;
-		else if ( ( health + chng ) <= 0 )
+		if((health += chng) <= 0)
 			death();
 		else
-			health = health - chng;
+		health += chng;
 
         }//end healthchng
 
