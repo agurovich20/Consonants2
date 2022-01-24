@@ -113,10 +113,17 @@ Marcus Wu    ::
 ==============================================================
 2022-01-21
 --------------------------------------------------------------
-Ari Gurovich :: implemented death() method, ending the class and prinit ngame over if ran, added shceduled time and its changes, added change to health and inventory drop of
-		item if grabbing fiver is failed
+Ari Gurovich :: implemented death() method, ending the class and prinit ngame over if ran, added shceduled time and its changes, added change to health and inventory 			drop of item if grabbing fiver is failed
 Oscar Breen  :: added healthchng method to chnage healoth up and down and activate death() method when below or = 0
 		Added switching place variables for better disaster syncing and timer(), which runs death() if u run out of time
 Marcus Wu    :: 
+==============================================================
+2022-01-22
+--------------------------------------------------------------
+Ari Gurovich ::
+Oscar Breen  :: added the game() method which references new helper class GuessNumber, an old hw for a minigame 
+		as well as adding the loop to search for a specific string ( provided by Marcus ) to make sure they equpped
+		the cellphone from home inventory
+Marcus Wu    :: loop to search for string
 
 
