@@ -258,14 +258,16 @@ public class StuyTrail {
 	public void disaster() {
 		int Odds = ( (int) ( Math.random() * 100 ) + 1 );
 		if ( Odds < 4 ) {
+			if (place < 5){
 			System.out.println( "You died of dysentery" );
 			healthchng(-50);
-		}
+			}
+		}//close odds 3
 		if ( Odds < 10 ) {
 			if ( place == 2 ) {
 				System.out.println( "You got hit by a train, must suck" );
 				healthchng(-2000);
-			}
+			}//close p 2
 			else if ( place == 4){
 				System.out.println("The sidewalks are really busy and that health line is filled with a whole lot of anti-maskers....");
 				boolean hasM = false;
@@ -275,50 +277,49 @@ public class StuyTrail {
 					}
 				} // ends checking loop
 
-				if (hasM == true)
+				if (hasM == true){
 					System.out.println("\nBut you've got your mask! Good choice.");
+				}
 				else{
 					System.out.println("\nToday was NOT a good day to forget a mask for your travel.");
 					System.out.println("Ur getting sick so 10 health loss for that");
-
 					healthchng(-10);
 				}
-			}
+			}//close p4
 			else if (place == 5 ){
 				System.out.println("AND YOU GET HER BY SUPRISE, HEAVY RIGHT HOOK \n 10 PTS OF DAMAGE");
 					healthB -= 10;
-			}
-		} else if ( Odds < 20 ) {
+			}//close p5
+
+		}//close Odds 10
+		else if ( Odds < 20 ) {
 			if( place == 2 ){
 				time = time - 5;
 				System.out.println( "Your train has been delayed by 5 minutes! You only have " + time + " before you are late." );
 				// train late
-			} 
+			}//close p2
 			else if( place == 7){
 				System.out.println("YOU GO FOR A HEADSLAM AND IT FLOWS THROUGH \n THATS A CRUSHING 10 PTS OF DAMAGE");
 				healthB -= 10;
-			}
-		} else if ( Odds < 30 ) {  // no jacket
-		/*	if ((place == 1) && has4 = false) {
-				System.out.println("looks like its cold out today, a jacket would've helped");
-				System.out.println("\nhealth loss of 5");
-				healthchng( 5 );
-			}*/
+			}//close p7
+		} //close odds 20 
+		else if ( Odds < 30 ) {
 			if ( place == 3 ) {
 				System.out.println( "You got the fiver! Nice!" );
 				money = money + 5;
-			}
+			}//close p3
 			else if (place == 0) {
 				System.out.println( "Oh Yiiiiiiikes, yikes dude, oh my god your face, yikes." );
 				System.out.println( "yeah uh, yeah health loss of 10 for that one" );
 				healthchng(-10);
-			}
+			}//close p0
 			else if ( place == 6){
 				System.out.println("YOU SWEEP THE LEG, SHE SLAMS ON HER BACK \nITS 5 PTS OF DAMAGE");
 				healthB -= 5;
-			}
-		} else if( Odds < 50){
-			if ( place == 10){
+			}//clsoe p6
+		}//close odds 30
+		else if( Odds < 50){
+			if ( place == 9){
 				System.out.println("It was\n");
 				boolean hasGS = false;
 				for ( int q = 0; q < inventory.size(); q++ ) {//check for mask
@@ -330,52 +331,39 @@ public class StuyTrail {
 					System.out.println("BUT YOU WERE PREPARED \n YOU HAVE NOW TRULY WON STUYTRAILS");
 					System.out.println("----------------------------------------------------------------------------------------------");
 				}
-			}
-		} else if( Odds >= 50 ) {
-			if ( place == 9)
+			}//ends p 9
+		} //close odds 50
+		else if( Odds >= 50 ) {
+			if ( place == 9){
 				System.out.println("Oh no, it wasnt, nevermind");
-
-		} else if ( Odds >= 30 ) {
+			}//close p9
+		} //close odds 50
+		else if ( Odds >= 30 ) {
 			if ( place == 3 ) {
 				lost = 5;
 				System.out.println( "\nSomeone got to the fiver first, and in the kerfuffle you dropped your " + inventory.get(0) + "!" );
 				System.out.println( "\nYou also lost " + lost + " of your health." );
 				healthchng(5);
-			} else if( place == 0 ) {
+			} //close p3
+			else if( place == 0 ) {
 				System.out.println( "Ayooooo you made it, free ride\n\n" );
-			}
+			}//close p 0
 			  else if (place == 6){
 			  	System.out.println("SHE PREDICTS YOYUR LEG SWEEP AND COUNTERS WITH A KNEE \nA SLAMMING 5 PTS OF DAMAGE TO YOU");
 			  	healthchng(-5);
-			  }
-		} else if (Odds >= 80){
+			} // close p6
+		} //close odds 70
+		else if (Odds >= 20){
 			if (place == 7){
 				System.out.println("YOU GO FOR THE HEADSLAM BUT SHE DUCKS AND UPPERCUTS YOU 5 FEET UP \n THATS A CLASHING 10 PTS OF DAMAGE");
 				healthchng(-10);
-			}
-		} else if (Odds >= 90){
+			}//close p7
+		} //close odds 80
+		else if (Odds >= 10){
 			if (place == 5){
 				System.out.println("BUT SHE SAW THIS COMING, SWING ON YOU FOR 5 PTS OF DAMAGE");
 					healthchng(-5);
-			}
-		}
-
-                // freezing
-                // subtract health
-//      else if ( Odds < 40 ) 
-                //lost ID_card
-//      else
-                // train on time
-        } //ends disaster()
-
-        /*public void train() {
-                trainOdds = ((int) Math.random() * 100 );
-                if ( trainOdds < 5 )
-                        //hit by train
-                else if ( trainOdds < 20 )
-                        // train late add time
-                else
-                        // train on time
-                }
-        }*/
+			}//close p5
+		}//close odds 90
+	}//close method
 } //ends class
