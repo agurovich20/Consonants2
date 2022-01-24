@@ -129,5 +129,6 @@ Marcus Wu    :: loop to search for string
 2022-01-23
 --------------------------------------------------------------
 Ari Gurovich :: finished implementing disasters, debugged GuessNumber, fixed functionality of probability
-Oscar Breen  :: 
-Marcus Wu    :: 
+Oscar Breen  :: added stuy() and walk() method as well as the final fight() method. rearranged the disaster makeup[, making it uglier but 
+		much more functionable
+Marcus Wu    :: discovered the actual leading cause of issues behind the disaster() issue of lack of fucntioning as well as cleaned up code 
