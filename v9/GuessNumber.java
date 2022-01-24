@@ -1,4 +1,4 @@
-'import java.util.Scanner;
+import java.util.Scanner;
 
 public class GuessNumber
 {
@@ -19,11 +19,7 @@ public class GuessNumber
   {
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
-<<<<<<< HEAD
-    _guessCtr = 0;
-=======
     _guessCtr = 1;
->>>>>>> 0b86f7eaa270249ab4815ee5d48dc84438d886f0
 
     //pick random number in range [a,b]
    _target = (int) (( Math.random() * _hi) + _lo);
@@ -37,7 +33,7 @@ public class GuessNumber
     ==================================================*/
   public void playRec()
   {
-    System.out.print("Guess a number between " + _lo + " & " + _hi + ": ");
+    System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
     int guess = sc.nextInt();
 
     //3 cases: we either found it, too hi, too lo
@@ -72,8 +68,8 @@ public class GuessNumber
      }
 
    else { 
-     System.out.println("U got it !!!");
-     System.out.println("Hold up, that took " + _guessCtr + " guesses?");
+     System.out.println("U got it !1!1!!");
+     System.out.println("Dam that took " + _guessCtr + " guesses?");
      }
   }
 
@@ -88,7 +84,7 @@ public class GuessNumber
     int guess;
     boolean x = true;
     while( x = true ) {
-      System.out.print("Guess a number between " + _lo + " & " + _hi + ": ");
+      System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
       guess = sc.nextInt();
 
       //3 cases: we either found it, too hi,
@@ -120,18 +116,19 @@ public class GuessNumber
      x = true;
      }
      else {
-     System.out.println("U got it !!!");
-     System.out.println("Hold up, that took " + _guessCtr + " guesses?");
+     System.out.println("U got it !1!1!!");
+     System.out.println("Dam that took " + _guessCtr + " guesses?");
     x = false;
     break; 
     }
   }
 }
+
+  //wrapper for playRec/playIter to simplify calling
   public void play()
   {
     //use one or the other below:
    // playRec();
     playIter();
   }
-
 }
