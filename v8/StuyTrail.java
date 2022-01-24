@@ -13,7 +13,7 @@ public class StuyTrail {
 	public StuyTrail() {
 		name = "";
 		health = 100;
-		money = ( (int) Math.random() * 20 ) + 5;;
+		money = 0;
 		time = 40;
 		place = 0;
 		hpchng = 0;
@@ -21,7 +21,7 @@ public class StuyTrail {
 	} //contructor
 
 	public void startGame() {
-		System.out.println( "Welcome to the StuyTrail: have fun getting to Stuyvesant!" );
+		System.out.println( "Welcome to the StuyTrail: have fun getting to Stuyvesant!\n" );
 		nameCharacter();
 		home();
 		train();
@@ -35,16 +35,16 @@ public class StuyTrail {
 	} //ends nameCharacter()
 
 	public void getBal() {
-		String ret = "";
+		String ret = "You now have ";
 		if ( money >= 50 )
-			ret = "$" + money + " in your wallet. You're rich!";
+			ret += "$" + money + " in your wallet. You're rich!";
 		else if ( money >= 20 )
-			ret = "$" + money + " in your wallet. Nice!";
+			ret += "$" + money + " in your wallet. Nice!";
 		else if ( money > 0 )
-			ret = "$" + money + " in your wallet.";
+			ret += "$" + money + " in your wallet.";
 		else
-			ret = "Well, You're broke.";
-		System.out.println( ret );
+			ret = "Well, You're broke now.";
+		System.out.println( ret + "\n" );
 	} //ends getBal()
 
 	public void getInv() {
@@ -55,7 +55,7 @@ public class StuyTrail {
 	}
 
 	public void death() {
-		System.out.println("-----------------------GAME-OVER-----------------------");
+		System.out.println("\n-----------------------GAME-OVER-----------------------");
 		System.exit(0);
 	}//end death()
 
@@ -74,19 +74,6 @@ public class StuyTrail {
 		if ( time <= 0 ){
 			System.out.println( "YOU RAN OUT OF TIME, YOU ARE LATE" );
 			death();
-		}
-	}
-
-	public void game(){
-		GuessNumber game = new GuessNumber(1, 30);
-		System.out.println( "Guess the number in 3 tries or less" );
-		game.play();
-		if( game._guessCtr < 4 ){
-			money = money + 5;
-			getBal();
-		} else {
-			System.out.println( "oof, too many tries there, no money for you" );
-			getBal();
 		}
 	}
 
@@ -109,7 +96,9 @@ public class StuyTrail {
 			System.out.println("\nYou've added " + itemsHome.get(itemIndex - 1) + " to your inventory\n");
 			itemsHome.remove( itemIndex - 1 );
 		}
-		System.out.println( "You have chosen: " + inventory + " and start off with: " );
+		System.out.println( "You have chosen: " + inventory + "\n" );
+		System.out.println( "You also grab your wallet." );
+		money = ( (int) Math.random() * 21 ) + 5;
 		getBal();
 		System.out.println( "\nTime to go to the subway. You have " + time + " minutes to get to school.\n" );
 	} //ends home()
@@ -129,14 +118,15 @@ public class StuyTrail {
     			System.out.println( "\n1: Jump \n2: Pay ($3)" );
 	        	int ans3 = Integer.parseInt( scannerInt.nextLine() );
 			if ( ans3 == 1 ) {
-				System.out.println( "you make the daring jump AND...\n\n" );
+				System.out.println( "\nyou make the daring jump AND...\n\n" );
 				disaster();
     			} else if ( ans3 == 2 ) {
 				money -= 3;
-				System.out.println( "better to pay for the metrocard than miss the train..." );
+				System.out.println( "\n(-$3) better to pay for the metrocard than miss the train..." );
+				getBal();
 			}
 		}//end of metrocard scenario
-		arrival = (int)(Math.random() *8);
+		arrival = ( (int) Math.random() * 8 ) + 1;
 		place = 1;
                 System.out.println( "You arrive safely at the subway station! The next train arrives in " + arrival + " minutes.\n" );
 		time = time - arrival;
@@ -167,7 +157,7 @@ public class StuyTrail {
 			}
 		} // ends checking loop
 		if( has == false ){
-			System.out.println( "\n\nthat game was probably a virus anyway..." );
+			System.out.println( "\nthat game was probably a virus anyway..." );
         	} else if ( has == true ) {
         		time();
         		game();
@@ -175,23 +165,37 @@ public class StuyTrail {
 
 	} //ends train()
 
+	public void game() {
+		GuessNumber game = new GuessNumber(1, 30);
+		System.out.println( "Guess the number in 3 tries or less" );
+		game.play();
+		if( game._guessCtr < 4 ) {
+			money = money + 5;
+			System.out.println( "you win the game and get 5 bucks!" );
+			getBal();
+		} else {
+			System.out.println( "oof, too many tries there, no money for you" );
+			getBal();
+		}
+	}
+
 	public void disaster() {
-		int Odds = ((int) (Math.random() * 100 ));
+		int Odds = ( (int) ( Math.random() * 100 ) + 1 );
 		if ( Odds < 4 ) {
-			System.out.println("You died of dysentery");
+			System.out.println( "You died of dysentery" );
 			health = 0;
 			death();
 		}
 		if ( Odds < 10 ) {
-			if (place == 2){
-				System.out.println("You got hit by a train, must suck");
+			if ( place == 2 ) {
+				System.out.println( "You got hit by a train, must suck" );
 				health = 0;
 				death();
 			}
 		} else if ( Odds < 20 ) {
 			if( place == 2 ){
 				time = time - 5;
-				System.out.println( "Your train has been delayed by 5 minutes! You only have " + time + " before you are late.");
+				System.out.println( "Your train has been delayed by 5 minutes! You only have " + time + " before you are late." );
 				// train late
 			}
 		} else if ( Odds < 30 ) {  // no jacket
@@ -201,12 +205,12 @@ public class StuyTrail {
 				healthchng( 5 );
 			}*/
 			if ( place == 3 ) {
-				System.out.println("You got the fiver!");
+				System.out.println( "You got the fiver! Nice!" );
 				money = money + 5;
 			}
 			else if (place == 0) {
-				System.out.println("Oh Yiiiiiiikes, yikes dude, oh my god your face, yikes.");
-				System.out.println("yeah uh, yeah health loss of 10 for that one");
+				System.out.println( "Oh Yiiiiiiikes, yikes dude, oh my god your face, yikes." );
+				System.out.println( "yeah uh, yeah health loss of 10 for that one" );
 				health = health - 10;
 			}
 		} else if ( Odds >= 30 ) {
