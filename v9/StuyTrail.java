@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 
@@ -14,6 +13,7 @@ public class StuyTrail {
 		name = "";
 		health = 25;
 		money = 0;
+		arrival = 0;
 		time = 40;
 		place = 0;
 		hpchng = 0;
@@ -101,7 +101,7 @@ public class StuyTrail {
 		}
 		System.out.println( "You have chosen: " + inventory + "\n" );
 		System.out.println( "You also grab your wallet." );
-		money = ( (int) Math.random() * 21 ) + 5;
+		money = (int) ( Math.random() * 21 );
 		getBal();
 		System.out.println( "\nTime to go to the subway. You have " + time + " minutes to get to school.\n" );
 	} //ends home()
@@ -129,7 +129,7 @@ public class StuyTrail {
 				getBal();
 			}
 		}//end of metrocard scenario
-		arrival = ( (int) Math.random() * 8 ) + 1;
+		arrival = (int) ( Math.random() * 8 + 2 );
 		place = 1;
                 System.out.println( "You've made it to the subway station! The next train arrives in " + arrival + " minutes.\n" );
 		time = time - arrival;
@@ -256,7 +256,7 @@ public class StuyTrail {
 	}
 
 	public void disaster() {
-		int Odds = ( (int) ( Math.random() * 100 ) + 1 );
+		int Odds = (int) ( Math.random() * 100 + 1 );
 		if ( Odds < 4 ) {
 			if (place < 5){
 			System.out.println( "You died of dysentery" );
