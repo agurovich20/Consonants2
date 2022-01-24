@@ -163,6 +163,25 @@ public class StuyTrail {
         		game();
         	}//ends cell phone scenario
 
+		//start charity encounter
+                System.out.println("\n A man approaches you asking for some money, do you choose to be charitable? ($3)");
+                System.out.println("\n1: Yes \n2: No");
+                int ans2 = Integer.parseInt( scannerInt.nextLine() );
+                if( ans2 == 1) {
+                        if(money >= 3){
+                                System.out.println("\nYou give the man 2 dollars");
+                                money -= 3;
+                                System.out.println("\nAfter some Karma generated godly intervention, you gain 5 minutes of time!">
+                                time += 5;
+                        }
+
+                        else
+                                System.out.println("damn dude you're broker than him, you dont got cash for that");
+                }
+                else
+                        System.out.println("\nWoooooooow, ok man, ur choice whatever");
+			//end charity encounter
+
 	} //ends train()
 
 	public void game() {
