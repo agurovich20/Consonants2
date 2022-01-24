@@ -120,10 +120,14 @@ Marcus Wu    ::
 ==============================================================
 2022-01-22
 --------------------------------------------------------------
-Ari Gurovich :: added new items and implemented storylines to go along with them 
+Ari Gurovich :: added new items and implemented disasters to go along with them 
 Oscar Breen  :: added the game() method which references new helper class GuessNumber,
 		as well as adding the loop to search for a specific string ( provided by Marcus ) to make sure they equpped
 		the cellphone from home inventory
 Marcus Wu    :: loop to search for string
-
-
+==============================================================
+2022-01-23
+--------------------------------------------------------------
+Ari Gurovich :: finished implementing disasters, debugged GuessNumber, fixed functionality of probability
+Oscar Breen  :: 
+Marcus Wu    :: 

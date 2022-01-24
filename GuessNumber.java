@@ -19,11 +19,7 @@ public class GuessNumber
   {
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
-<<<<<<< HEAD
     _guessCtr = 0;
-=======
-    _guessCtr = 1;
->>>>>>> 0b86f7eaa270249ab4815ee5d48dc84438d886f0
 
     //pick random number in range [a,b]
    _target = (int) (( Math.random() * _hi) + _lo);
