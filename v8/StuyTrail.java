@@ -80,7 +80,7 @@ public class StuyTrail {
 	public void game(){
 		GuessNumber game = new GuessNumber(1, 30);
 		System.out.println( "Guess the number in 3 tries or less" );
-                game.play();
+		game.play();
 		if( game._guessCtr < 4 ){
 			money = money + 5;
 			getBal();
@@ -90,29 +90,29 @@ public class StuyTrail {
 		}
 	}
 
-        public void home() {
-                System.out.println( "You wake up and get out of bed, ready to start the day.\nChoose two items to bring with you to school:" );
-                ArrayList<String> itemsHome = new ArrayList<String>();
-                itemsHome.add( "Student ID" );
-                itemsHome.add( "Student Metrocard" );
-                itemsHome.add( "Jacket" );
-                itemsHome.add( "Gym Clothes" );
-                itemsHome.add( "Cell Phone" );
-                itemsHome.add( "Mask" );
-                for ( int i = 0; i < 2; i++ ) {
-                        for ( int p = 0; p < itemsHome.size(); p++ ) {
-                                System.out.println( p+1 + ": " +  itemsHome.get(p));
-                        }
-                        int itemIndex = Integer.parseInt( scannerInt.nextLine() );
+	public void home() {
+		System.out.println( "You wake up and get out of bed, ready to start the day.\nChoose two items to bring with you to school:" );
+		ArrayList<String> itemsHome = new ArrayList<String>();
+		itemsHome.add( "Student ID" );
+		itemsHome.add( "Student Metrocard" );
+		itemsHome.add( "Jacket" );
+		itemsHome.add( "Gym Clothes" );
+		itemsHome.add( "Cell Phone" );
+		itemsHome.add( "Mask" );
+		for ( int i = 0; i < 2; i++ ) {
+			for ( int p = 0; p < itemsHome.size(); p++ ) {
+				System.out.println( p+1 + ": " +  itemsHome.get(p) );
+			}
+			int itemIndex = Integer.parseInt( scannerInt.nextLine() );
 			time();
-                        inventory.add( itemsHome.get( itemIndex - 1 ) );
-                        System.out.println("\nYou've added " + itemsHome.get(itemIndex - 1) + " to your inventory\n");
-                        itemsHome.remove( itemIndex - 1 );
-                }
-                System.out.println( "You have chosen: " + inventory + " and start off with: " );
-                getBal();
-                System.out.println( "\nTime to go to the subway. You have " + time + " minutes to get to school.\n" );
-        } //ends home()
+			inventory.add( itemsHome.get( itemIndex - 1 ) );
+			System.out.println("\nYou've added " + itemsHome.get(itemIndex - 1) + " to your inventory\n");
+			itemsHome.remove( itemIndex - 1 );
+		}
+		System.out.println( "You have chosen: " + inventory + " and start off with: " );
+		getBal();
+		System.out.println( "\nTime to go to the subway. You have " + time + " minutes to get to school.\n" );
+	} //ends home()
 
         public void train() {
                 System.out.println("-------------------------------------------------------");
