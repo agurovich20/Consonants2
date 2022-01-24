@@ -3,63 +3,63 @@ import java.util.*;
 
 public class StuyTrail {
 
-        private String name;
-        private int turn, health, money, arrival, trainOdds, time, place, lost, hpchng;
+	private String name;
+	private int turn, health, money, arrival, trainOdds, time, place, lost, hpchng;
 
-        Scanner scannerString = new Scanner (System.in);
-        Scanner scannerInt = new Scanner (System.in);
-        ArrayList<String> inventory = new ArrayList<String>();
+	Scanner scannerString = new Scanner (System.in);
+	Scanner scannerInt = new Scanner (System.in);
+	ArrayList<String> inventory = new ArrayList<String>();
 
-        public StuyTrail() {
-                name = "";
-                health = 100;
-                money = ( (int) Math.random() * 20 ) + 5;;
-                time = 40;
-                place = 0;
+	public StuyTrail() {
+		name = "";
+		health = 100;
+		money = ( (int) Math.random() * 20 ) + 5;;
+		time = 40;
+		place = 0;
 		hpchng = 0;
 		turn = 0;
-        } //contructor
+	} //contructor
 
-        public void startGame() {
-                System.out.println( "Welcome to the StuyTrail: have fun getting to Stuyvesant!" );
-                nameCharacter();
-                home();
-                train();
-        } //ends startGame()
+	public void startGame() {
+		System.out.println( "Welcome to the StuyTrail: have fun getting to Stuyvesant!" );
+		nameCharacter();
+		home();
+		train();
+	} //ends startGame()
 
-        public String nameCharacter() {
-                System.out.println( "What is your name?" );
-                name = scannerString.nextLine();
-                System.out.println("\nHello " + name + ", Your journey begins now!\n" );
-                return name;
-        } //ends nameCharacter()
+	public String nameCharacter() {
+		System.out.println( "What is your name?" );
+		name = scannerString.nextLine();
+		System.out.println("\nHello " + name + ", Your journey begins now!\n" );
+		return name;
+	} //ends nameCharacter()
 
-        public void getBal() {
-                String ret = "";
-                if ( money >= 50 )
-                        ret = "$" + money + " in your wallet. You're rich!";
-                else if ( money >= 20 )
-                        ret = "$" + money + " in your wallet. Nice!";
-                else if ( money > 0 )
-                        ret = "$" + money + " in your wallet.";
-                else
-                        ret = "Well, You're broke.";
-                System.out.println( ret );
-        } //ends getBal()
+	public void getBal() {
+		String ret = "";
+		if ( money >= 50 )
+			ret = "$" + money + " in your wallet. You're rich!";
+		else if ( money >= 20 )
+			ret = "$" + money + " in your wallet. Nice!";
+		else if ( money > 0 )
+			ret = "$" + money + " in your wallet.";
+		else
+			ret = "Well, You're broke.";
+		System.out.println( ret );
+	} //ends getBal()
 
-        public void getInv() {
-            System.out.println( "You reach into your bag and find..." );
-                for ( int i = 0; i < inventory.size(); i++ ) {
-                        System.out.println( "\t" + inventory.get(i) );
-                }
-        }
+	public void getInv() {
+		System.out.println( "You reach into your bag and find..." );
+		for ( int i = 0; i < inventory.size(); i++ ) {
+			System.out.println( "\t" + inventory.get(i) );
+		}
+	}
 
-        public void death() {
-                System.out.println("-----------------------GAME-OVER-----------------------");
-                        System.exit(0);
-        }//end death()
+	public void death() {
+		System.out.println("-----------------------GAME-OVER-----------------------");
+		System.exit(0);
+	}//end death()
 
-        public void healthchng(int chng){
+	public void healthchng( int chng ) {
 		if( chng > 0 )
 			health = health + chng;
 		else if ( ( health - chng ) <= 0 )
