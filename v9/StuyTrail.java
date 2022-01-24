@@ -63,10 +63,9 @@ public class StuyTrail {
 	}//end death()
 
 	public void healthchng( int chng ) {
-		if((health += chng) <= 0)
-			death();
-		else
 		health += chng;
+		if( health <= 0 )
+			death();
 
         }//end healthchng
 
@@ -258,13 +257,13 @@ public class StuyTrail {
 		if ( Odds < 4 ) {
 			if ( place < 5 ){
 				System.out.println( "You died of dysentery" );
-				healthchng(-50);
+				death();
 			}
 		}//close odds 3
 		if ( Odds < 10 ) {
 			if ( place == 2 ) {
 				System.out.println( "You got hit by a train, must suck" );
-				healthchng(-2000);
+				death();
 			}//close p 2
 			else if ( place == 4){
 				System.out.println("The sidewalks are really busy and that health line is filled with a whole lot of anti-maskers....");
