@@ -41,24 +41,25 @@ out specifically for that choice?
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
+there is a lot to learn about scanners that we do not know yet, they really provide the player
+with some interactive-ness in a game like this
+whitespace is really important and it is nigh unreadable without proper-it-ness
 
 / temporary section for ideas:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Add mask item, if don't have, 90% chance for Covid on any turn
-,
 At every scanner input increase time variable by one for turn count
-App seen on add in train, if have item: phone then have opportunity or playe binsearch game for money
+App seen on add in train, if have item: phone then have opportunity or play binsearch game for money
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed the one object of inventory to two, one for the starting choices and one for
 the interaction with outside home() because we didnt want overlap when it came to random 
 occurences
+
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-dont have it linear, allow for switvhing between scenes and actions for a more Oregan-trail 
+dont have it linear, allow for switching between scenes and actions for a more Oregon-trail 
 type feel
 ||||||||||||||||||||||||||||||||||||||||||
 
@@ -103,20 +104,20 @@ Marcus Wu    :: worked on StuyTrail and Woo to implement scanners
 Ari Gurovich :: Began implementing probability 
 	        Made ideas for inventory items 
 Oscar Breen  :: Worked alongside to implement methods of home()
-Marcus Wu    :: Set up a GetBal method with varying S.O.P returns
+Marcus Wu    :: Set up getBal method with varying S.O.P returns
 ==============================================================
 2022-01-20
 --------------------------------------------------------------
 Ari Gurovich :: Continued implementing probability and disasters 
 Oscar Breen  :: improved disasters method and added a new scene "train()" and choice in it (fiver)
-Marcus Wu    :: 
+Marcus Wu    :: worked on v4 with the fellas
 ==============================================================
 2022-01-21
 --------------------------------------------------------------
 Ari Gurovich :: implemented death() method, added scheduled time and its changes, implemented changes to health and inventory drop
-Oscar Breen  :: added healthchng method to chnage healoth up and down and activate death() method when below or = 0
-		Added switching place variables for better disaster syncing and timer(), which runs death() if u run out of time
-Marcus Wu    :: 
+Oscar Breen  :: added healthchng(int) method to change health up and down and activate death() method when health <= 0
+		Added switching place variables for better disaster syncing and timer(), which runs death() if you run out of time
+Marcus Wu    :: sleeping because its a friday (or something i just dont know what i did this day)
 ==============================================================
 2022-01-22
 --------------------------------------------------------------
@@ -124,11 +125,16 @@ Ari Gurovich :: added new items and implemented disasters to go along with them
 Oscar Breen  :: added the game() method which references new helper class GuessNumber,
 		as well as adding the loop to search for a specific string ( provided by Marcus ) to make sure they equpped
 		the cellphone from home inventory
-Marcus Wu    :: loop to search for string
+Marcus Wu    :: loop to search for strings in the inventory (an ArrayList of Strings)
 ==============================================================
 2022-01-23
 --------------------------------------------------------------
 Ari Gurovich :: finished implementing disasters, debugged GuessNumber, fixed functionality of probability
 Oscar Breen  :: added stuy() and walk() method as well as the final fight() method. rearranged the disaster makeup[, making it uglier but 
 		much more functionable
-Marcus Wu    :: discovered the actual leading cause of issues behind the disaster() issue of lack of fucntioning as well as cleaned up code 
+Marcus Wu    :: discovered the actual leading cause of issues behind the disaster() issue of lack of functioning as well as cleaned up code
+		redid disaster() because the code looked like a disaster() <-- basically overwrote (tidied up (overwrote)) what oscar wrote
+		fixed pacing of the story by adding nextLine() as "press enter to continue"'s, and fixed some of the script.
+		renamed Proposal.pdf to propro.pdf as per instructions
+		updated README.md instructions on how to run the game as per instructions
+		is not working on uml.pdf i dont have it who has the uml please upload it wait nobody is awake
