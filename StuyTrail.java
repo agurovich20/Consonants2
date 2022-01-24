@@ -215,7 +215,9 @@ public class StuyTrail {
 		if( hasID == true ) {//have card
     			System.out.println( "AND YES YOU ARE, you swipe with confidence and \n\nYOU. \nARE. \n\nIN" );
 		} else {//dont have card
-    			System.out.println( "Oh no.... you dont have your ID\n but you HAVE to get in, you've got a Calc test dude!!\n\n So make the choice." );
+    			System.out.println( "Oh no.... you dont have your ID\n but you HAVE to get in, you've got a Calc test dude!!" );
+			scannerString.nextLine(); //press enter to continue
+			System.out.println( "\nSo make the choice." );
     			System.out.println( "\n1: FIGHT \n2: Pay, the cowards way out ($5)\n" );
 	        	int ans6 = Integer.parseInt( scannerInt.nextLine() );
 			if ( ans6 == 1 ) {
