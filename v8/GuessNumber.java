@@ -33,7 +33,7 @@ public class GuessNumber
     ==================================================*/
   public void playRec()
   {
-    System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
+    System.out.print("Guess a number between " + _lo + " & " + _hi + ": ");
     int guess = sc.nextInt();
 
     //3 cases: we either found it, too hi, too lo
@@ -68,8 +68,8 @@ public class GuessNumber
      }
 
    else { 
-     System.out.println("U got it !1!1!!");
-     System.out.println("Dam that took " + _guessCtr + " guesses?");
+     System.out.println("U got it !!!");
+     System.out.println("Hold up, that took " + _guessCtr + " guesses?");
      }
   }
 
@@ -84,7 +84,7 @@ public class GuessNumber
     int guess;
     boolean x = true;
     while( x = true ) {
-      System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
+      System.out.print("Guess a number between " + _lo + " & " + _hi + ": ");
       guess = sc.nextInt();
 
       //3 cases: we either found it, too hi,
@@ -116,8 +116,8 @@ public class GuessNumber
      x = true;
      }
      else {
-     System.out.println("U got it !1!1!!");
-     System.out.println("Dam that took " + _guessCtr + " guesses?");
+     System.out.println("U got it !!!");
+     System.out.println("Hold up, that took " + _guessCtr + " guesses?");
     x = false;
     break; 
     }
