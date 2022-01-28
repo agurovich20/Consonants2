@@ -13,3 +13,4 @@ cd <REPONAME>
 javac Woo.java
 java Woo
 ```
+follow directions, press enter to continue and enjoy the game
